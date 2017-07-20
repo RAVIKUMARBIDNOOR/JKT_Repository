@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48859" started-at="2017-07-20T09:41:11Z" finished-at="2017-07-20T09:42:00Z">
+  <suite name="Default suite" duration-ms="7319" started-at="2017-07-20T11:16:27Z" finished-at="2017-07-20T11:16:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48859" started-at="2017-07-20T09:41:11Z" finished-at="2017-07-20T09:42:00Z">
+    <test name="Default test" duration-ms="7319" started-at="2017-07-20T11:16:27Z" finished-at="2017-07-20T11:16:34Z">
       <class name="pack.com.AutomationTC1">
-        <test-method status="FAIL" signature="test1()[pri:0, instance:pack.com.AutomationTC1@32e6e9c3]" name="test1" duration-ms="48827" started-at="2017-07-20T15:11:11Z" finished-at="2017-07-20T15:12:00Z">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:pack.com.AutomationTC1@32e6e9c3]" name="test1" duration-ms="7288" started-at="2017-07-20T16:46:27Z" finished-at="2017-07-20T16:46:34Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[chrome not reachable
+              <![CDATA[unknown error: cannot get automation extension
+from chrome not reachable
   (Session info: chrome=59.0.3071.115)
   (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.05 seconds
+Command duration or timeout: 2.03 seconds
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'JKTDKLS008', ip: '10.10.20.124', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\RAVI~1.BID\AppData\Local\Temp\scoped_dir18592_27655}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: c1c523cc4cd16f50b938767d460f9e5c
-*** Element info: {Using=partial link text, value=Next}]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\RAVI~1.BID\AppData\Local\Temp\scoped_dir20316_21885}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0a46d7ae35b9a3ab6ec52362125d7cda]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot get automation extension
+from chrome not reachable
   (Session info: chrome=59.0.3071.115)
   (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.05 seconds
+Command duration or timeout: 2.03 seconds
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'JKTDKLS008', ip: '10.10.20.124', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\RAVI~1.BID\AppData\Local\Temp\scoped_dir18592_27655}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: c1c523cc4cd16f50b938767d460f9e5c
-*** Element info: {Using=partial link text, value=Next}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\RAVI~1.BID\AppData\Local\Temp\scoped_dir20316_21885}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0a46d7ae35b9a3ab6ec52362125d7cda
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -39,11 +39,9 @@ Session ID: c1c523cc4cd16f50b938767d460f9e5c
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByPartialLinkText(RemoteWebDriver.java:469)
-	at org.openqa.selenium.By$ByPartialLinkText.findElement(By.java:273)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at pack.com.Browsers.before(Browsers.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at pack.com.Browsers.before(Browsers.java:54)
 	at pack.com.AutomationTC1.test1(AutomationTC1.java:12)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
