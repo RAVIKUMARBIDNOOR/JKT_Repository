@@ -32,7 +32,7 @@ public class Login1 {
 		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		wd.manage().window().maximize();
 		
-		wd.get("http://www.Google.com");
+		//wd.get("http://www.Google.com");
 	   
 	   
 //		File source=((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
