@@ -9,7 +9,8 @@ public class AutomationTC1 {
 		
 	Browsers.common();
 	Thread.sleep(2000);
-	Browsers.before();
+	Browsers.tc1();
+	Browsers.tc2();
 	Browsers.after();
 
 	

@@ -15,10 +15,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
@@ -46,7 +49,7 @@ public class Browsers  {
 		
 	}
 	@Test
-	static public void before() throws InterruptedException
+	static public void tc1() throws InterruptedException
 	{
 		
 		System.out.println("Test Starting");
@@ -69,6 +72,24 @@ public class Browsers  {
    	    wd.findElement(By.partialLinkText("25")).click();
    	    wd.findElement(By.id("searchBtn")).click();
 	      Thread.sleep(15000);
+	}
+	@Test
+	static public void tc2() throws InterruptedException
+	{
+
+		
+		JavascriptExecutor js = (JavascriptExecutor)wd; 
+		js.executeScript("scroll(0,1000)");
+		Thread.sleep(5000);
+/*		js.executeScript("scroll(0,800)");*/
+		WebElement slider=wd.findElement(By.xpath("//*[@id='price_slider']/a"));
+	Actions act=new Actions(wd);
+	 act.dragAndDropBy(slider, -70, 0).build().perform();
+      Thread.sleep(10000);
+  	JavascriptExecutor js1 = (JavascriptExecutor)wd; 
+	js1.executeScript("scroll(0,100)");
+      act.dragAndDropBy(slider, 50, 0).build().perform();
+      Thread.sleep(20000);
 	}
 	@AfterMethod(dependsOnMethods={"common","before"})
 	static public void after()
