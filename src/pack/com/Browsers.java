@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeClass;
 
 import java.io.File;
 import java.nio.channels.Selector;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
@@ -45,6 +46,10 @@ public class Browsers  {
 	
 		System.setProperty("webdriver.chrome.driver", "D:\\Automation Projects\\chromedriver.exe");
 		wd=new ChromeDriver(options);
+		System.out.println("Test Starting");
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		wd.manage().window().maximize();
+	
 	
 		
 	}
@@ -52,9 +57,6 @@ public class Browsers  {
 	static public void tc1() throws InterruptedException
 	{
 		
-		System.out.println("Test Starting");
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		wd.manage().window().maximize();
 		wd.get("https://www.makemytrip.com/");
 		wd.findElement(By.id("hp-widget__sfrom")).click();
 		wd.findElement(By.cssSelector(".input_fromto.ui-autocomplete-input")).click();
@@ -82,14 +84,29 @@ public class Browsers  {
 		js.executeScript("scroll(0,1000)");
 		Thread.sleep(5000);
 /*		js.executeScript("scroll(0,800)");*/
-		WebElement slider=wd.findElement(By.xpath("//*[@id='price_slider']/a"));
+		
+		//Price range code-------------------
+		
+		/*WebElement slider=wd.findElement(By.xpath("//*[@id='price_slider']/a"));
 	Actions act=new Actions(wd);
 	 act.dragAndDropBy(slider, -70, 0).build().perform();
       Thread.sleep(10000);
   	JavascriptExecutor js1 = (JavascriptExecutor)wd; 
 	js1.executeScript("scroll(0,100)");
       act.dragAndDropBy(slider, 50, 0).build().perform();
-      Thread.sleep(20000);
+      Thread.sleep(20000);*/
+		
+		//Multiple check box checking it code-----
+		
+		/*List<WebElement> allck=wd.findElements(By.cssSelector(".checkbox_state.pull-right"));
+		int count=allck.size();
+		System.out.println(count);
+		for(int i=0;i<count;i++)
+		{
+		allck.get(i).click();
+		Thread.sleep(2000);
+		}
+		Thread.sleep(10000);*/
 	}
 	@AfterMethod(dependsOnMethods={"common","before"})
 	static public void after()
