@@ -80,10 +80,12 @@ public class Browsers  {
 	{
 
 		
-		JavascriptExecutor js = (JavascriptExecutor)wd; 
+	/*	JavascriptExecutor js = (JavascriptExecutor)wd; 
 		js.executeScript("scroll(0,1000)");
-		Thread.sleep(5000);
-/*		js.executeScript("scroll(0,800)");*/
+		Thread.sleep(5000);*/
+		
+		
+   /* js.executeScript("scroll(0,800)");*/
 		
 		//Price range code-------------------
 		
@@ -107,6 +109,17 @@ public class Browsers  {
 		Thread.sleep(2000);
 		}
 		Thread.sleep(10000);*/
+		
+      wd.findElement(By.cssSelector(".o-c-listing_row__flightD.pull-left.open_icon_mark")).click();
+      Thread.sleep(2000);
+	  wd.findElement(By.xpath("//*[@id='content']/div/div[2]/div[5]/div[2]/div[5]/div/div[5]/ul/li[2]/a")).click();
+	  Thread.sleep(2000);
+	  wd.findElement(By.cssSelector("#content > div > div.container.ng-scope > div.row > div.main.col-lg-9.col-md-9.col-sm-12.col-xs-12 > div:nth-child(5) > div > div.clearfix.main-div1.first_active.c-listing_row.c-listing_row__details > ul > li:nth-child(3) > a")).click();
+	  Thread.sleep(2000);
+	  wd.findElement(By.xpath("//*[@id='content']/div/div[2]/div[5]/div[2]/div[5]/div/div[5]/ul/li[4]/a")).click();
+	  Thread.sleep(2000);
+	  wd.findElement(By.xpath("//*[@id='content']/div/div[2]/div[5]/div[2]/div[5]/div/div[5]/ul/li[5]/a")).click();
+	  Thread.sleep(10000);
 	}
 	@AfterMethod(dependsOnMethods={"common","before"})
 	static public void after()
