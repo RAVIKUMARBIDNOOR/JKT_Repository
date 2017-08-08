@@ -33,28 +33,33 @@ public class ReadingData {
 		FileInputStream fis=new FileInputStream(file);
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
 		XSSFSheet sheet=wb.getSheetAt(0);
-		Iterator<Row> itrow=sheet.iterator();
-		while(itrow.hasNext()){
-			Row nextrow=itrow.next();
-	        Iterator<Cell> cellit=nextrow.cellIterator();
-	        while(cellit.hasNext())
-	        {
-	        	Cell cell=cellit.next();
-	        switch(cell.getCellType())
-	        {
-	        case Cell.CELL_TYPE_STRING:
-	        System.out.print(cell.getRichStringCellValue());
-	        break;
-	        case Cell.CELL_TYPE_NUMERIC:
-	        System.out.println(cell.getNumericCellValue());
-	        break;
-	        case Cell.CELL_TYPE_BOOLEAN:
-	        System.out.println(cell.getBooleanCellValue());
-	        break;
-            }
-            System.out.println();
+		Iterator<Row> itrow= sheet.iterator();
+		while(itrow.hasNext())
+		{
+			Row row=itrow.next();
+			Iterator<Cell> cell=row.cellIterator();
+			while(cell.hasNext())
+			{
+				Cell cell1=cell.next();
+				
+				switch(cell1.getCellType())
+				{
+				case Cell.CELL_TYPE_BLANK:
+					System.out.println(cell1.getBooleanCellValue());
+					break;
+				case Cell.CELL_TYPE_STRING:
+					System.out.println(cell1.getStringCellValue());
+					break;
+				case Cell.CELL_TYPE_NUMERIC:
+					System.out.println(cell1.getNumericCellValue());
+					break;
+				}
+			}
+		}
+		
+	           }
 	       
-	        }}}}
+	        }
 		
 		 /* Iterator<Row> iterator = sheet.iterator();
 	         
@@ -103,6 +108,28 @@ public class ReadingData {
 		           System.out.println(sd);
 		           
                    }}}}
+                   
+                   
+                   Iterator<Row> itrow=sheet.iterator();
+		while(itrow.hasNext()){
+			Row nextrow=itrow.next();
+	        Iterator<Cell> cellit=nextrow.cellIterator();
+	        while(cellit.hasNext())
+	        {
+	        	Cell cell=cellit.next();
+	        switch(cell.getCellType())
+	        {
+	        case Cell.CELL_TYPE_STRING:
+	        System.out.print(cell.getRichStringCellValue());
+	        break;
+	        case Cell.CELL_TYPE_NUMERIC:
+	        System.out.println(cell.getNumericCellValue());
+	        break;
+	        case Cell.CELL_TYPE_BOOLEAN:
+	        System.out.println(cell.getBooleanCellValue());
+	        break;
+            }
+            System.out.println();
                   
 */
 		
