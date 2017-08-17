@@ -48,7 +48,7 @@ public class Browsers  {
 		wd=new ChromeDriver(options);
 		System.out.println("Test Starting");
 		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		wd.manage().window().maximize();
+		wd.manage().window().maximize(); 
 	
 	
 		
