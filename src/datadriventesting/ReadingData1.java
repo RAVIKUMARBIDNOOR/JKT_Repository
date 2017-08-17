@@ -20,21 +20,27 @@ import org.testng.annotations.Test;
 public class ReadingData1 
 {
 	@Test(dataProvider="getdata")
-	public static void setData(String usn ,String pwd )
+	public static void test1(String usn,String pwd,String name)
 	{
-		System.out.println();
-		System.out.println();
+		System.out.println(usn);
+		System.out.println(pwd);
 	}
 	
-	        
 	@DataProvider
 	public Object[][] getdata()
 	{
-		Object[][] data=new Object[2][2];
-		data[0][0]="Ravi";
-		data[0][1]="kumar";
-		data[1][0]="ravi";
-		data[1][1]="Bidnoor";
-		return data;
+		Object[][] obj=new Object[2][2];
+		
+		obj[0][0]="Ravi";
+		obj[0][1]="Kumar";
+		obj[0][2]="Kumar";
+		obj[1][0]="Bidnoor";
+		obj[1][1]="Bidnoor";
+		obj[1][2]="Bidnoor";
+		obj[2][0]="Bidnoor";
+		obj[2][1]="Bidnoor";
+		obj[2][2]="Bidnoor";
+		return obj;
+		
 	}
 	}
