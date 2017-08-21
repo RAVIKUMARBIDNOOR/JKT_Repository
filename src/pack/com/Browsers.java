@@ -58,6 +58,8 @@ public class Browsers  {
 	{
 		
 		wd.get("https://www.makemytrip.com/");
+		String s=wd.getPageSource().toString();
+		System.out.println(s);
 		wd.findElement(By.id("hp-widget__sfrom")).click();
 		wd.findElement(By.cssSelector(".input_fromto.ui-autocomplete-input")).click();
 		  Thread.sleep(2000);

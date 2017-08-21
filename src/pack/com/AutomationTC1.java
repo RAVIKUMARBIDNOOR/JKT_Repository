@@ -7,11 +7,11 @@ public class AutomationTC1 {
 	public void test1 () throws InterruptedException
 	{
 		
-	/*Browsers.common();
+	Browsers.common();
 	Thread.sleep(2000);
 	Browsers.tc1();
 	Browsers.tc2();
-	Browsers.after();*/
+	Browsers.after();
 		
  
 	
