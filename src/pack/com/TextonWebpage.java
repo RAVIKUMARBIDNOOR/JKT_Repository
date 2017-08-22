@@ -1,8 +1,11 @@
 package pack.com;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
@@ -27,6 +30,13 @@ public class TextonWebpage {
 		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		wd.manage().window().maximize();
 		wd.get("https://www.makemytrip.com/");
-        String s=wd.getPageSource().toString();
+        String s=wd.getPageSource().substring(2);
         System.out.println(s);
+       List<WebElement> we= wd.findElements(By.tagName("span"));
+      for(WebElement w:we)
+      {
+    	  
+    	  System.out.println(w.getText());
+    	
+      }
 }}
