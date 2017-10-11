@@ -5,9 +5,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
@@ -33,12 +35,32 @@ public class WrittingData {
 		File file=new File("D:\\Automation Projects\\TestData.xlsx");
 		FileInputStream fis=new FileInputStream(file);
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
-		XSSFSheet sheet=wb.getSheetAt(0);	
-		  Cell searchText = sheet.getRow(0).getCell(0);
-		  searchText.setCellValue(s);
-		 FileOutputStream fos=new FileOutputStream("D:\\Automation Projects\\TestData.xlsx");
-		 wb.write(fos);
-		 wb.close();
+		XSSFSheet sheet=wb.getSheetAt(0);
+		Iterator<Row> row= sheet.iterator();
+		while(row.hasNext())
+		{
+			Row row1=row.next();
+			Iterator<Cell> cell=row1.cellIterator();
+			while(cell.hasNext())
+			{
+				Cell cell1=cell.next();
+				switch(cell1.getCellType())
+				{
+				case Cell.CELL_TYPE_STRING:
+					System.out.println(cell1.getStringCellValue());
+					break;
+				
+				}
+				{
+					
+				}
+			}
+		}
+		Cell searchText = sheet.getRow(0).getCell(0);
+		searchText.setCellValue(s);
+		FileOutputStream fos=new FileOutputStream("D:\\Automation Projects\\TestData.xlsx");
+		wb.write(fos);
+		wb.close();
 	}
 
 }
