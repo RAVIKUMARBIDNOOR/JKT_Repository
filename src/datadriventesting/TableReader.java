@@ -31,6 +31,8 @@ public class TableReader {
 	    System.out.println("No of rows are : " + rows.size());
 	    List <WebElement> Cells = wd.findElements(By.xpath(".//*[@id='leftcontainer']/table/tbody/tr/td")); 
         System.out.println("No of Cells are : " + Cells.size());
+        WebElement we=wd.findElement(By.xpath(".//*[@id='leftcontainer']/table/tbody/tr[2]/td[1]"));
+        System.out.println(we.getText());
 		wd.close();
 		System.out.println("Test is Ended");
 	}
